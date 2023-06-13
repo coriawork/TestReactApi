@@ -11,6 +11,7 @@ function App() {
     axios
     .get("http://localhost:8000/juegos")
     .then(function (response) {
+      console.log(response.data);
       setJuegos(response.data);
     })
     .catch((error) => console.error(error));
@@ -43,6 +44,9 @@ function App() {
     getPlataforma();
   },[]);
 
+  const decode = (type,img)=>{
+    return 'data:image/'+type+';base64,'+img;
+  }
   
   return (
     <div>
@@ -55,6 +59,8 @@ function App() {
               <li>{juego.descripcion}</li>
               <li>genero: {buscarGeneroPorId(juego.id_genero)}</li>
               <li>Plataforma: {buscarPlataformaPorId(juego.id_plataforma)}</li>
+              <li>Url: {juego.url}</li>
+              <img src={decode(juego.tipo_imagen,juego.imagen)}></img>
             </ul>
           </div>
         ))}
