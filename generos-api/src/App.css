@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(36, 36, 73);
+    color:rgb(250, 245, 245);
+    overflow: hidden;
+}
+.App-header{
+    text-align: center;
+    text-decoration: underline;
+}
+.container-list{
+    width: 100vw;
+    height: 85vh;
+}
+
+.container-list table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-list table tbody{
+    height: 10%;
+    text-align: center;
+}
+
+.container-list table thead{
+    height: 10%;
+    text-align: center;
+    border-bottom: 2px solid #131212;
+}
+
+.container-list table thead tr{
+    width: 100VW;
+    justify-content: center;
+}
+.container-list table thead tr th{
+    width: 25vh;
+}
+.container-list table tbody tr{
+    width: 100VW;
+    justify-content: center;
+}
+.container-list table tbody tr td{
+    width: 25vh;
+    border-right: 2px solid #131212;
+}
+#editar{
+    background: rgb(68, 194, 30);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #131313;
+    font-size: 10px;
+    height: 25px;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+#eliminar {
+    background: rgb(194, 63, 30);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #131313;
+    font-size: 10px;
+    height: 25px;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.moddle{
+    margin-top: -3.6vh;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+.moddle div{
+    width: 50%;
+    height: 90%;
+    background-color: #131212;
+    border-radius: 20px;
+}
+.moddle i{
+    display: flex;
+    width: 100%;
+    margin-left: -20px;
+    flex-direction: row-reverse;
+    cursor: pointer;
+}
+.moddle div header h1{
+    text-align: center;
+}
+.moddle div main {
+    height: 85%;
+    width: 100%;
+}
+.hidden{
+    display: none;
+}

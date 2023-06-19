@@ -11,7 +11,6 @@ function App() {
     axios
     .get("http://localhost:8000/juegos")
     .then(function (response) {
-      console.log(response.data);
       setJuegos(response.data);
     })
     .catch((error) => console.error(error));
@@ -33,6 +32,7 @@ function App() {
        .catch((error) => console.error(error));
    };
   const buscarGeneroPorId = (id) => {
+    console.log(generos.find((objeto) => objeto.id === id).nombre);
     return generos.find((objeto) => objeto.id === id).nombre;
   };
   const buscarPlataformaPorId = (id) => {
